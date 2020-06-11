@@ -90,7 +90,6 @@ export interface SnowpackConfig {
   webDependencies?: {[packageName: string]: string};
   scripts: BuildScript[];
   plugins: SnowpackPlugin[];
-  homepage?: string;
   devOptions: {
     secure: boolean;
     port: number;
@@ -727,7 +726,6 @@ export function loadAndValidateConfig(flags: CLIFlags, pkgManifest: any): Snowpa
     extendConfig,
     {
       webDependencies: pkgManifest.webDependencies,
-      homepage: pkgManifest.homepage,
     },
     config,
     cliConfig as any,

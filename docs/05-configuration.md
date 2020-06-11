@@ -46,7 +46,6 @@ $ snowpack dev --no-bundle
     "unistore/full/preact.es.js", // An ESM file within a package (supports globs)
     "bulma/css/bulma.css" // A non-JS static asset (supports globs)
   ],
-  "homepage": "/your-project",
   "scripts": { /* ... */ },
   "installOptions": { /* ... */ },
   "devOptions": { /* ... */ },
@@ -64,10 +63,6 @@ $ snowpack dev --no-bundle
   - Useful for excluding tests and other unnecessary files from the final build. Supports glob pattern matching. 
 - **`install`** | `string[]`
   - Known dependencies to install with Snowpack. Useful for installing packages manually and any dependencies that couldn't be detected by our automatic import scanner (ex: package CSS files).
-- **`homepage`** | `string`
-  - By default, Snowpack's builds your app assuming it will be hosted at the server root.
-  - You can set the "homepage" whenever your project is deployed anywhere other than the domain's root URL.
-  - Note: Snowpack will also read this value from your `package.json` manifest.
 - **`scripts`**
   - Set build scripts to transform your source files. See the section below for more info.
 - **`installOptions.*`**
